@@ -259,7 +259,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
     def handle(self, handler_input, exception):
         # type: (HandlerInput, Exception) -> Response
         logger.error(exception, exc_info=True)
-        logger(handler_input)
+        logger(handler_input) # this showing error means we need to call the function like info, error or debug ?
 
         speak_output = "Sorry, I had trouble doing what you asked. Please try again."
 
